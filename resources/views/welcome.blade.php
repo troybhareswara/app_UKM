@@ -157,13 +157,13 @@
         </header>
 
         <section class="hero">
-            <h1>Data Keanggotaan<br>UKM.</h1>
-            <p>Tugas yang baik adalah tugas yang selesai.</p>
-            <a href="#" class="btn-hero">Jujur, Izinn</a>
+            <h1>Data Keanggotaan<br>UKM Badminton.</h1>
+            <p>Periode 2026/2027</p>
+            
         </section>
 
         <footer style="margin-top: 50px; padding: 20px 0; border-top: 1px solid #eee; font-size: 0.8rem; color: #888;">
-            &copy; Teknologi Informasi Undiknas 2025. All rights reserved.
+            &copy; Teknologi Informasi Undiknas 2026. All rights reserved.
         </footer>
     </div>
 

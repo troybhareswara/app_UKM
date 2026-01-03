@@ -162,6 +162,8 @@
             .auth-buttons { width: 100%; justify-content: flex-start;}
             .hero h1 { font-size: 2.5rem; }
         }
+
+        
     </style>
 </head>
 <body>
