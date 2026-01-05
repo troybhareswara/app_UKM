@@ -1,32 +1,20 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
-<div class="container">
-    <div class="card">
-        <div class="card-header">Tambah Kegiatan</div>
+<h2>Tambah Kegiatan</h2>
 
-        <div class="card-body">
-            <form action="{{ route('kegiatans.store') }}" method="POST">
-                @csrf
+<form method="POST" action="{{ route('kegiatan.store') }}">
+@csrf
 
-                <div class="mb-3">
-                    <label>Nama Kegiatan</label>
-                    <input type="text" name="nama_kegiatan" class="form-control">
-                </div>
+<label>Nama Kegiatan</label><br>
+<input type="text" name="nama_kegiatan"><br><br>
 
-                <div class="mb-3">
-                    <label>Tanggal</label>
-                    <input type="date" name="tanggal" class="form-control">
-                </div>
+<label>Tanggal</label><br>
+<input type="date" name="tanggal"><br><br>
 
-                <div class="mb-3">
-                    <label>Deskripsi</label>
-                    <textarea name="deskripsi" class="form-control"></textarea>
-                </div>
+<label>Deskripsi</label><br>
+<textarea name="deskripsi"></textarea><br><br>
 
-                <button class="btn btn-success">Simpan</button>
-            </form>
-        </div>
-    </div>
-</div>
+<button type="submit">Simpan</button>
+</form>
 @endsection

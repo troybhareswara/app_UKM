@@ -4,21 +4,20 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\MahasiswaController;
 
+
 /*
 |--------------------------------------------------------------------------
 | ROOT / SPLASH
 |--------------------------------------------------------------------------
-| Halaman awal → loading logo
 */
 Route::get('/', function () {
-    return view('splash'); // splash screen
+    return view('splash');
 })->name('root');
 
 /*
 |--------------------------------------------------------------------------
-| AUTH ROUTES
+| AUTH
 |--------------------------------------------------------------------------
-| Login, Register, Logout, dll (bawaan Laravel UI)
 */
 Auth::routes();
 
@@ -26,7 +25,6 @@ Auth::routes();
 |--------------------------------------------------------------------------
 | DASHBOARD
 |--------------------------------------------------------------------------
-| Halaman setelah login
 */
 Route::get('/dashboard', function () {
     return view('home');
@@ -34,17 +32,15 @@ Route::get('/dashboard', function () {
 
 /*
 |--------------------------------------------------------------------------
-| MAHASISWA ROUTES
+| AUTHENTICATED ROUTES
 |--------------------------------------------------------------------------
-| Semua route mahasiswa harus login
 */
 Route::middleware(['auth'])->group(function () {
 
-    // Semua user login bisa lihat data
+    // ===== MAHASISWA =====
     Route::get('/mahasiswas', [MahasiswaController::class, 'index'])
         ->name('mahasiswas.index');
 
-    // Hanya ADMIN
     Route::middleware(['admin'])->group(function () {
 
         Route::get('/mahasiswas/create', [MahasiswaController::class, 'create'])
@@ -61,8 +57,8 @@ Route::middleware(['auth'])->group(function () {
 
         Route::delete('/mahasiswas/{mahasiswa}', [MahasiswaController::class, 'destroy'])
             ->name('mahasiswas.destroy');
-
-        Route::resource('kegiatan', KegiatanController::class);
-
     });
+
+    // // ===== KEGIATAN =====
+    // Route::resource('kegiatan', KegiatanController::class);
 });

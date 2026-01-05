@@ -1,46 +1,17 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
-<div class="container">
-    <div class="card">
-        <div class="card-header d-flex justify-content-between">
-            <span>Data Kegiatan</span>
+<h2>Data Kegiatan</h2>
 
-            @if(Auth::user()->role === 'admin')
-                <a href="{{ route('kegiatans.create') }}" class="btn btn-primary btn-sm">
-                    Tambah Kegiatan
-                </a>
-            @endif
-        </div>
+<a href="{{ route('kegiatan.create') }}">+ Tambah Kegiatan</a>
 
-        <div class="card-body">
-            <table class="table table-bordered">
-                <tr>
-                    <th>No</th>
-                    <th>Nama Kegiatan</th>
-                    <th>Tanggal</th>
-                    <th>Deskripsi</th>
-                    @if(Auth::user()->role === 'admin')
-                        <th>Aksi</th>
-                    @endif
-                </tr>
-
-                @foreach($kegiatans as $kegiatan)
-                <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{ $kegiatan->nama_kegiatan }}</td>
-                    <td>{{ $kegiatan->tanggal }}</td>
-                    <td>{{ $kegiatan->deskripsi }}</td>
-
-                    @if(Auth::user()->role === 'admin')
-                    <td>
-                        <a href="{{ route('kegiatans.edit', $kegiatan->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                    </td>
-                    @endif
-                </tr>
-                @endforeach
-            </table>
-        </div>
-    </div>
-</div>
+<ul>
+@foreach ($kegiatans as $k)
+    <li>
+        <b>{{ $k->nama_kegiatan }}</b><br>
+        {{ $k->tanggal }}<br>
+        {{ $k->deskripsi }}
+    </li>
+@endforeach
+</ul>
 @endsection
