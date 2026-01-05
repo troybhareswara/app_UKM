@@ -14,6 +14,8 @@ Route::get('/', function () {
     return view('splash'); // splash screen
 })->name('root');
 
+
+
 /*
 |--------------------------------------------------------------------------
 | AUTH ROUTES
@@ -21,6 +23,11 @@ Route::get('/', function () {
 | Login, Register, Logout, dll (bawaan Laravel UI)
 */
 Auth::routes();
+
+Route::get('/home', function () {
+    Auth::logout();
+    return redirect()->route('login');
+});
 
 /*
 |--------------------------------------------------------------------------
