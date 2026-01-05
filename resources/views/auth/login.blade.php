@@ -37,4 +37,7 @@
 
         <button type="submit">Login</button>
     </form>
+            <footer style="margin-top: 50px; padding: 20px 0; border-top: 1px solid #eee; font-size: 0.8rem; color: #888;">
+            &copy; Teknologi Informasi Undiknas 2026. All rights reserved.
+        </footer>
 @endsection
