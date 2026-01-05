@@ -23,7 +23,6 @@
             width: 100%;
             max-width: 400px;
             padding: 40px;
-            border-radius: 14px;
             box-shadow: 0 12px 30px rgba(0,0,0,.2);
             text-align: center;
         }

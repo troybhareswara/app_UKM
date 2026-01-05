@@ -87,6 +87,7 @@
         <a href="{{ route('dashboard') }}">🏠 Dashboard</a>
         <a href="{{ route('mahasiswas.index') }}">🎓 Mahasiswa</a>
 
+
         @if(Auth::check() && Auth::user()->role === 'admin')
         <a href="{{ route('mahasiswas.create') }}">➕ Tambah Mahasiswa</a>
         @endif
