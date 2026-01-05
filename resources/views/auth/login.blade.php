@@ -35,9 +35,31 @@
             <label for="remember">Remember Me</label>
         </div>
 
-        <button type="submit">Login</button>
+       <button type="submit">Login</button>
+
+        <div style="
+            margin-top: 18px;
+            text-align: center;
+            font-size: 0.85rem;
+        ">
+            Belum punya akun?
+            <a href="{{ route('register') }}" style="
+                color: #007bff;
+                text-decoration: none;
+                font-weight: 500;
+            ">
+                Daftar di sini
+            </a>
+        </div>
+
     </form>
             <footer style="margin-top: 50px; padding: 20px 0; border-top: 1px solid #eee; font-size: 0.8rem; color: #888;">
-            &copy; Teknologi Informasi Undiknas 2026. All rights reserved.
+            &copy; Teknologi Informasi Undiknas 2026.
         </footer>
 @endsection
+@if (session('success'))
+    <div class="success">
+        {{ session('success') }}
+    </div>
+@endif
+
