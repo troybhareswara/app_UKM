@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mahasiswas', function (Blueprint $table) {
+    Schema::create('kegiatans', function (Blueprint $table) {
         $table->id();
-        $table->foreignId('user_id')->nullable();
-        $table->string('nim');
-        $table->string('nama');
-        $table->string('jurusan');
+        $table->string('nama_kegiatan');
+        $table->date('tanggal');
+        $table->string('lokasi');
+        $table->text('deskripsi')->nullable();
+        $table->enum('status', ['upcoming', 'selesai'])->default('upcoming');
         $table->timestamps();
         });
     }
@@ -25,10 +26,8 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down()
+    public function down(): void
     {
-        Schema::table('mahasiswas', function (Blueprint $table) {
-        $table->dropColumn('user_id');
-    });
+        Schema::dropIfExists('kegiatans');
     }
 };

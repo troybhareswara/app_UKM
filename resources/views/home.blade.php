@@ -1,32 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<h2>UKM BADMINTON</h2>
+<p>Selamat datang, {{ Auth::user()->name }}</p>
 
-                <div class="card-body text-center"> {{-- Saya tambah text-center agar rapi di tengah --}}
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<div class="dashboard-cards">
+    <div class="card">
+        <h3>Mahasiswa</h3>
+        <p>120</p>
+    </div>
 
-                    <p>{{ __('You are logged in!') }}</p>
+    <div class="card">
+        <h3>UKM</h3>
+        <p>5</p>
+    </div>
 
-                    {{-- --- TOMBOL LINK DITAMBAHKAN DI SINI --- --}}
-                    <div class="mt-4">
-                        <a href="{{ route('mahasiswas.index') }}" class="btn btn-primary">
-                            Lihat Data Mahasiswa
-                        </a>
-                    </div>
-                    {{-- --------------------------------------- --}}
-                    
-                </div>
-            </div>
-        </div>
+    <div class="card">
+        <h3>Kegiatan</h3>
+        <p>12</p>
     </div>
 </div>
 @endsection
