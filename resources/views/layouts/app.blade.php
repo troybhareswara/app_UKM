@@ -3,12 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>Dashboard | UKM</title>
+
+    <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
     @vite(['resources/sass/app.scss','resources/js/app.js'])
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background: #f5f5f5;
         }
 
@@ -65,6 +69,11 @@
             cursor: pointer;
             user-select: none;
         }
+        .kegiatan-card {
+        text-decoration: none;
+         color: inherit;
+        }
+
 
 
     </style>

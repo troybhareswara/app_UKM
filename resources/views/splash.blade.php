@@ -14,13 +14,13 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #111;
-            color: white;
+            background: linear-gradient(135deg, #ffffff, #b0b0b0);
+            color: rgb(0, 0, 0);
             font-family: Arial, sans-serif;
         }
     </style>
 </head>
 <body>
-    <h1>UKM BADMINTON</h1>
+    <h1>UNDIKNAS BADMINTON</h1>
 </body>
 </html>

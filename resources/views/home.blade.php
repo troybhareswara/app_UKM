@@ -15,9 +15,12 @@
         <p>5</p>
     </div>
 
+    <a href="https://pbsi.id/kejuaraan/" class="kegiatan-card" target="_blank" rel="noopener noreferrer">
     <div class="card">
-        <h3>Kegiatan</h3>
-        <p>12</p>
+        <h3>Kegiatan UKM</h3>
+        <p>Lihat daftar perlombaan mahasiswa</p>
     </div>
+    </a>
+
 </div>
 @endsection
