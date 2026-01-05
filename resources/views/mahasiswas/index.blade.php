@@ -4,11 +4,7 @@
 <h2>Data Mahasiswa</h2>
 
 @if(Auth::user()->role == 'admin')
-    <a href="{{ route('mahasiswas.create') }}"
-       class="btn btn-primary btn-sm"
-       style="margin-bottom:15px;background:black;border:black;">
-       + Tambah Mahasiswa
-    </a>
+  
 @endif
 
 @if ($message = Session::get('success'))
