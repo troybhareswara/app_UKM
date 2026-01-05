@@ -40,7 +40,7 @@
 <body>
 
     <div class="loader">
-        {{-- GANTI LOGO SESUAI PUNYA KAMU --}}
+        
         <img src="{{ asset('logo.png') }}" alt="Logo UKM">
         <p>Loading...</p>
     </div>

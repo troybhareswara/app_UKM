@@ -69,7 +69,6 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/mahasiswas/{mahasiswa}', [MahasiswaController::class, 'destroy'])
             ->name('mahasiswas.destroy');
 
-        Route::resource('kegiatan', KegiatanController::class);
 
     });
 });
